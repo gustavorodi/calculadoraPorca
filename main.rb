@@ -7,7 +7,6 @@ class Main
           puts x+y
         end  
       end
-      
     end
 
     if op == "dividir"
@@ -33,9 +32,20 @@ class Main
         end  
       end
     end
+
+    self.main(op,x,y)
+  end
+
+  def aleatorio()
+    if (1==1)
+      number = rand(9)
+      if number == 1
+        number = self.aleatorio()
+      end
+      return number
+    end
   end
 end
 
 calculadora = Main.new
-calculadora.main(soma, 4, 9)
-
+calculadora.main("soma", calculadora.aleatorio(), calculadora.aleatorio())
