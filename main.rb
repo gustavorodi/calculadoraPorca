@@ -39,7 +39,7 @@ class Main
   def aleatorio()
     if (1==1)
       number = rand(9)
-      if number == 1
+      if number != 1
         number = self.aleatorio()
       end
       return number
